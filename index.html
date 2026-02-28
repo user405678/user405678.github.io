@@ -1,1 +1,43 @@
-<p>hey</p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Select a Game</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #1e1e2f;
+            color: white;
+            text-align: center;
+            padding-top: 100px;
+        }
+
+        select {
+            padding: 10px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Select a Game</h1>
+
+    <select onchange="redirectToGame(this)">
+        <option value="">-- Choose a Game --</option>
+        <option value="https://user405678.github.io/contexto/">contexto</option>
+    </select>
+
+    <script>
+        function redirectToGame(selectElement) {
+            const url = selectElement.value;
+            if (url) {
+                window.location.href = url;
+            }
+        }
+    </script>
+
+</body>
+</html>
